@@ -24,9 +24,10 @@ Future Work: We plan to redesign the Raspberry Pi HAT to support higher voltage 
 ```
 
 ## Installation 
-Steps to install:
 
-Step 1 (You can skip this step and directly use the 'brains_pickle' file we have generated.)
+Step 1 
+
+(You can skip this step and directly use the 'brains_pickle' file we have generated.)
 
 ```
 1. git clone https://github.com/onerachel/Lamarckism_Environments.git
@@ -39,34 +40,37 @@ Step 1 (You can skip this step and directly use the 'brains_pickle' file we have
 create and save lamarc_brain.pickle and darw_brain.pickle
 ``` 
 
-Step 2
-```
+Step 2 
+
 On a SSD card, install:
 
-1. git clone https://github.com/onerachel/physical_robot_experiments.git
+```
+git clone https://github.com/onerachel/physical_robot_experiments.git
 
-[This is not the default revolve2 version, make sure to install modular_robot and modular_robot_physical packages with the updated ( _brain_cpg_instance_environmental_control.py & _brain_cpg_network_static_environmental_control and _brain_cpg_network_static) under modular_robot/brain/cpg]
-
+[note: This is not the default revolve2 version, make sure to install modular_robot and modular_robot_physical packages with the updated ( _brain_cpg_instance_environmental_control.py & _brain_cpg_network_static_environmental_control and _brain_cpg_network_static) under modular_robot/brain/cpg]
 ```
 
-Step 3
-```
-Copy config.ipynb notebook to rasperberry pi:
-1. scp <config.ipynb> pi@<ip>:~/.
+Step 3 
 
-[All the pickles will be used in this notebook]
+Copy config.ipynb notebook to Raspberry Pi (all the pickle files used in this notebook are also there):
+
+```
+scp <config.ipynb> pi@<ip>:~/.
+
 ```
 
 Step 4
-```
-For recording the experiments and calculate the fitness etc, additional recording camera is setup:
-1. run_recording_cameras.py
 
-[remove the fish eye effect]
+For recording the experiments and calculate the fitness etc, additional recording camera is setup:
+
+```
+python run_recording_cameras.py
+
 ```
 
 ## Run experiments 
 To run experiments
+
 ``` 
 python run_experiment.py
 ``` 
